@@ -1,0 +1,304 @@
+mixed-port: 7890
+redir-port: 7892
+allow-lan: true
+bind-address: '*'
+mode: Rule
+log-level: silent
+external-controller: :19090
+external-ui: dashboard
+proxies:
+proxy-groups:
+  - name: proxy
+    type: select
+    proxies:
+      - delay
+      - cn
+      - relay-pool
+      - origin
+  - name: cn
+    type: select
+    use:
+      - cn
+  - name: relay-pool
+    type: select
+    use:
+      - relay-pool
+  - name: origin
+    type: select
+    use:
+      - origin
+  - name: delay
+    type: url-test
+    use:
+      - all
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+proxy-providers:
+  cn:
+    type: http
+    url: "http://192.168.99.73:12580/clash/proxies?c=CN,HK,TW"
+    interval: 21600
+    path: providers/cn.yaml
+    health-check:
+      enable: true
+      interval: 3600
+      url: http://www.gstatic.com/generate_204
+  relay-pool:
+    type: http
+    url: "http://192.168.99.73:12580/clash/proxies?nc=CN,HK,TW&filter=rp&speed=10"
+    interval: 21600
+    path: providers/relay-pool.yaml
+    health-check:
+      enable: true
+      interval: 3600
+      url: http://www.gstatic.com/generate_204
+  origin:
+    type: http
+    url: "http://192.168.99.73:12580/clash/proxies?nc=CN,HK,TW&filter=nrp&speed=10"
+    interval: 21600
+    path: providers/origin.yaml
+    health-check:
+      enable: true
+      interval: 3600
+      url: http://www.gstatic.com/generate_204
+  all:
+    type: http
+    url: "http://192.168.99.73:12580/clash/proxies"
+    interval: 3600
+    path: providers/all.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+#dns:
+#  enable: true
+#  listen: 0.0.0.0:8853
+#  ipv6: false
+#  enhanced-mode: fake-ip
+#  fake-ip-range: 198.18.0.1/16
+#  fake-ip-filter:
+#    - "*.lan"
+#    - 'localhost.ptlogin2.qq.com'
+#    - 'dns.msftncsi.com'
+#    - 'www.msftncsi.com'
+#    - 'www.msftconnecttest.com'
+#  nameserver:
+#    - 192.168.99.1
+#    - 119.29.29.29
+#    - 223.5.5.5
+#    - 114.114.114.114
+#    - https://doh.pub/dns-query
+#    - https://dns.alidns.com/dns-query
+#  fallback:
+#    - tls://8.8.8.8:853
+#    - tls://8.8.4.4:853
+#    - https://dns.cloudflare.com/dns-query
+#    - https://dns.google/dns-query
+#  fallback-filter:
+#    geoip: true
+#    geoip-code: CN
+#    ipcidr:
+#      - 240.0.0.0/4
+#tun:
+#  enable: true
+#  stack: gvisor
+#  dns-hijack:
+#    - 198.18.0.2:53
+#  auto-route: true
+#  auto-detect-interface: true  
+
+rules:
+ - RULE-SET,LocalAreaNetwork,DIRECT
+ - RULE-SET,UnBan,DIRECT
+ - RULE-SET,BanAD,REJECT
+ - RULE-SET,BanProgramAD,REJECT
+ - RULE-SET,GoogleFCM,proxy
+ - RULE-SET,GoogleCN,DIRECT
+ - RULE-SET,SteamCN,proxy
+ - RULE-SET,OneDrive,proxy
+ - RULE-SET,Microsoft,proxy
+ - RULE-SET,Apple,proxy
+ - RULE-SET,Telegram,proxy
+ - RULE-SET,NetEaseMusic,proxy
+ - RULE-SET,Epic,proxy
+ - RULE-SET,Sony,proxy
+ - RULE-SET,Apple,proxy
+ - RULE-SET,Steam,proxy
+ - RULE-SET,YouTube,proxy
+ - RULE-SET,Netflix,proxy
+ - RULE-SET,Bahamut,proxy
+ - RULE-SET,BilibiliHMT,proxy
+ - RULE-SET,Bilibili,DIRECT
+ - RULE-SET,ChinaMedia,DIRECT
+ - RULE-SET,ProxyLite,proxy
+ - RULE-SET,ProxyMedia,proxy
+ - RULE-SET,ProxyGFWlist,proxy
+ - RULE-SET,ChinaDomain,DIRECT
+ - RULE-SET,ChinaCompanyIp,DIRECT
+ - RULE-SET,Download,DIRECT
+ - GEOIP,CN,DIRECT
+ - MATCH,proxy
+rule-providers:
+  LocalAreaNetwork:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
+    interval: 86400
+    path: Providers/LocalAreaNetwork.yaml
+  UnBan:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
+    interval: 86400
+    path: Providers/UnBan.yaml
+  BanAD:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
+    interval: 86400
+    path: Providers/BanAD.yaml
+  BanProgramAD:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    interval: 86400
+    path: Providers/BanProgramAD.yaml
+  GoogleFCM:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml"
+    interval: 86400
+    path: Providers/Ruleset/GoogleFCM.yaml
+  GoogleCN:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCN.yaml"
+    interval: 86400
+    path: Providers/Ruleset/GoogleCN.yaml
+  SteamCN:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/SteamCN.yaml"
+    interval: 86400
+    path: Providers/Ruleset/SteamCN.yaml
+  OneDrive:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OneDrive.yaml"
+    interval: 86400
+    path: Providers/Ruleset/OneDrive.yaml
+  Microsoft:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
+    interval: 86400
+    path: Providers/Ruleset/Microsoft.yaml
+  Apple:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml"
+    interval: 86400
+    path: Providers/Ruleset/Apple.yaml
+  Telegram:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml"
+    interval: 86400
+    path: Providers/Ruleset/Telegram.yaml
+  NetEaseMusic:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/NetEaseMusic.yaml"
+    interval: 86400
+    path: Providers/Ruleset/NetEaseMusic.yaml
+  Epic:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Epic.yaml"
+    interval: 86400
+    path: Providers/Ruleset/Epic.yaml
+  Sony:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Sony.yaml"
+    interval: 86400
+    path: Providers/Ruleset/Sony.yaml
+  Steam:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Steam.yaml"
+    interval: 86400
+    path: Providers/Ruleset/Steam.yaml
+  YouTube:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml"
+    interval: 86400
+    path: Providers/Ruleset/YouTube.yaml
+  Netflix:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Netflix.yaml"
+    interval: 86400
+    path: Providers/Ruleset/Netflix.yaml
+  Bahamut:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bahamut.yaml"
+    interval: 86400
+    path: Providers/Ruleset/Bahamut.yaml
+  BilibiliHMT:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/BilibiliHMT.yaml"
+    interval: 86400
+    path: Providers/Ruleset/BilibiliHMT.yaml
+  Bilibili:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bilibili.yaml"
+    interval: 86400
+    path: Providers/Ruleset/Bilibili.yaml
+  ChinaMedia:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaMedia.yaml"
+    interval: 86400
+    path: Providers/ChinaMedia.yaml
+  ProxyLite:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyLite.yaml"
+    interval: 86400
+    path: Providers/ProxyLite.yaml
+  ProxyMedia:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml"
+    interval: 86400
+    path: Providers/ProxyMedia.yaml
+  ProxyGFWlist:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
+    interval: 86400
+    path: Providers/ProxyGFWlist.yaml
+  ChinaDomain:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml"
+    interval: 86400
+    path: Providers/ChinaDomain.yaml
+  ChinaCompanyIp:
+    behavior: ipcidr 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml"
+    interval: 86400
+    path: Providers/ChinaCompanyIp.yaml
+  Download:
+    behavior: classical 
+    type: file
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Download.yaml"
+    interval: 86400
+    path: Providers/Download.yaml
