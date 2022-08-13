@@ -79,3 +79,84 @@ proxies:
   - {name: ">🇺🇸 US|高速|TG@FProxies|081308| 13", server: 38.75.136.21, port: 9102, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
   - {name: ">🇺🇸 US|高速|TG@FProxies|081308| 14", server: 38.114.114.67, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
   - {name: ">🇺🇸 US|高速|TG@FProxies|081308| 15", server: 38.91.101.159, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+proxies:
+  - {name: ">🇦🇺 AU|中速|TG@FProxies|081311|", server: 185.167.116.253, port: 9050, type: ss, cipher: aes-256-cfb, password: FG5ddLsMPbV5CutE, udp: true}
+  - {name: ">🇨🇦 CA|高速|TG@FProxies|081311|", server: kr04.170203.xyz, port: 45555, type: trojan, password: 4aa06393-0482-41bd-be06-8ffd523f22a8, sni: DanHuang.Jiang, skip-cert-verify: true, udp: true}
+  - {name: ">🇨🇿 CZ|中速|TG@FProxies|081311|", server: v2-tcp.shop, port: 15017, type: vmess, uuid: 114a080f-ff23-48a5-b98c-6815a5cda4e2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: v2-tcp.shop}}, udp: true}
+  - {name: ">🇨🇿 CZ|中速|TG@FProxies|081311| 2", server: v2-tcp.shop, port: 15017, type: vmess, uuid: 257d9741-dc6d-4471-95c4-039cfd4832ca, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: v2-tcp.shop}}, udp: true}
+  - {name: ">🇨🇿 CZ|中速|TG@FProxies|081311| 3", server: v2-tcp.shop, port: 15017, type: vmess, uuid: 24ad6b42-79f1-49e8-aa2f-5aa749c6cd1f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: v2-tcp.shop}}, udp: true}
+  - {name: ">🇨🇿 CZ|高速|TG@FProxies|081311|", server: levne.v237p.top, port: 37918, type: vmess, uuid: 5ba60278-49e9-4dd8-9123-1238aefdaea8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: levne.v237p.top}}, udp: true}
+  - {name: ">🇫🇷 FR|中速|TG@FProxies|081311|", server: 54.36.174.181, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: ">🇫🇷 FR|高速|TG@FProxies|081311|", server: 62.210.113.98, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: ">🇫🇷 FR|高速|TG@FProxies|081311| 2", server: 62.210.113.98, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
+  - {name: ">🇫🇷 FR|高速|TG@FProxies|081311| 3", server: 62.210.113.98, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: ">🇫🇷 FR|高速|TG@FProxies|081311| 4", server: 62.210.113.98, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: ">🇫🇷 FR|高速|TG@FProxies|081311| 5", server: 83.150.217.62, port: 44612, type: trojan, password: dbdd4673-06e7-4a53-adb7-aa4232df529e, skip-cert-verify: true, udp: true}
+  - {name: ">🇬🇧 GB|高速|TG@FProxies|081311|", server: 172.99.190.149, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: ">🇭🇰 HK|中速|TG@FProxies|081311|", server: 148.66.56.99, port: 804, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: ">🇯🇵 JP|中速|TG@FProxies|081311|", server: 85.208.108.59, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇯🇵 JP|中速|TG@FProxies|081311| 2", server: sgd1.crunode.top, port: 1200, type: trojan, password: d45ed1c9-a6ca-3d8b-ba1a-d2bb17cd06e3, sni: sgd1.crunode.top, skip-cert-verify: true, udp: true}
+  - {name: ">🇯🇵 JP|中速|TG@FProxies|081311| 3", server: 85.208.108.90, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇯🇵 JP|中速|TG@FProxies|081311| 4", server: 85.208.108.90, port: 5600, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇯🇵 JP|中速|TG@FProxies|081311| 5", server: 85.208.108.60, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: ">🇯🇵 JP|高速|TG@FProxies|081311|", server: 85.208.108.21, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: ">🇯🇵 JP|高速|TG@FProxies|081311| 2", server: 85.208.108.94, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇯🇵 JP|高速|TG@FProxies|081311| 3", server: 85.208.108.93, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇯🇵 JP|高速|TG@FProxies|081311| 4", server: 85.208.108.93, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: ">🇯🇵 JP|高速|TG@FProxies|081311| 5", server: 85.208.108.93, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: ">🇯🇵 JP|高速|TG@FProxies|081311| 6", server: 85.208.108.91, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
+  - {name: ">🇯🇵 JP|高速|TG@FProxies|081311| 7", server: jpmax02.170203.xyz, port: 444, type: trojan, password: 4aa06393-0482-41bd-be06-8ffd523f22a8, sni: DanHuang.Jiang, skip-cert-verify: true, udp: true}
+  - {name: ">🇯🇵 JP|高速|TG@FProxies|081311| 8", server: 85.208.108.91, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
+  - {name: ">🇰🇷 KR|中速|TG@FProxies|081311|", server: kr1.api-aws.com, port: 443, type: trojan, password: c0767eba-addc-4cb4-bd4a-616808db7e8e, skip-cert-verify: true, udp: true}
+  - {name: ">🇰🇷 KR|中速|TG@FProxies|081311| 2", server: kr1.api-aws.com, port: 443, type: trojan, password: b2672422-b795-4ad5-b753-755e410c6129, skip-cert-verify: true, udp: true}
+  - {name: ">🇰🇷 KR|中速|TG@FProxies|081311| 3", server: kr1.api-aws.com, port: 443, type: trojan, password: 09960259-32e6-4e29-951e-4250ef2a8b97, skip-cert-verify: true, udp: true}
+  - {name: ">🇰🇷 KR|高速|TG@FProxies|081311|", server: kr1.api-aws.com, port: 443, type: trojan, password: 5a5e2de7-692d-4c2d-818f-ce28fb9c90b1, skip-cert-verify: true, udp: true}
+  - {name: ">🇰🇷 KR|高速|TG@FProxies|081311| 2", server: kr1.api-aws.com, port: 443, type: trojan, password: db9b6698-f01c-4fe1-93ca-d752c956c2d3, skip-cert-verify: true, udp: true}
+  - {name: ">🇰🇷 KR|高速|TG@FProxies|081311| 3", server: kr1.api-aws.com, port: 443, type: trojan, password: 6b455739-f8a3-448c-844e-814312bdf08a, skip-cert-verify: true, udp: true}
+  - {name: ">🇰🇷 KR|高速|TG@FProxies|081311| 4", server: kr1.api-aws.com, port: 443, type: trojan, password: 7b55a9ef-15e1-4d03-83bd-9258e921cb39, skip-cert-verify: true, udp: true}
+  - {name: ">🇰🇷 KR|高速|TG@FProxies|081311| 5", server: kr1.api-aws.com, port: 443, type: trojan, password: f6169c0a-7a1a-4c68-8a02-f9c27d793332, skip-cert-verify: true, udp: true}
+  - {name: ">🇳🇱 NL|中速|TG@FProxies|081311|", server: 213.183.51.172, port: 9057, type: ss, cipher: aes-256-cfb, password: wjTugX3ZtHMB9c3Z, udp: true}
+  - {name: ">🇳🇱 NL|中速|TG@FProxies|081311| 2", server: 185.246.155.23, port: 9010, type: ss, cipher: aes-256-cfb, password: f63gg8EruDnUrmz4, udp: true}
+  - {name: ">🇳🇱 NL|中速|TG@FProxies|081311| 3", server: 213.183.59.185, port: 9014, type: ss, cipher: aes-256-cfb, password: KnJGad3FqTvjqbaX, udp: true}
+  - {name: ">🇳🇱 NL|中速|TG@FProxies|081311| 4", server: 213.183.59.177, port: 9008, type: ss, cipher: aes-256-cfb, password: y9VURyNzJWNRYEGQ, udp: true}
+  - {name: ">🇳🇱 NL|中速|TG@FProxies|081311| 5", server: 213.183.51.172, port: 9007, type: ss, cipher: aes-256-cfb, password: kSPmvwdFzGMMW5pY, udp: true}
+  - {name: ">🇳🇱 NL|高速|TG@FProxies|081311|", server: 213.183.59.206, port: 9026, type: ss, cipher: aes-256-cfb, password: QWDDvVE9npNurQfA, udp: true}
+  - {name: ">🇳🇱 NL|高速|TG@FProxies|081311| 2", server: 213.183.59.211, port: 9033, type: ss, cipher: aes-256-cfb, password: UTJA57ypk2XKQpnm, udp: true}
+  - {name: ">🇳🇱 NL|高速|TG@FProxies|081311| 3", server: 172.99.188.71, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
+  - {name: ">🇵🇱 PL|中速|TG@FProxies|081311|", server: 217.30.10.68, port: 9041, type: ss, cipher: aes-256-cfb, password: U6qnYRhfyDmn8sgn, udp: true}
+  - {name: ">🇵🇱 PL|高速|TG@FProxies|081311|", server: 217.30.10.68, port: 9060, type: ss, cipher: aes-256-cfb, password: ueLXVkvh4hckhErQ, udp: true}
+  - {name: ">🇵🇱 PL|高速|TG@FProxies|081311| 2", server: 217.30.10.67, port: 9050, type: ss, cipher: aes-256-cfb, password: FG5ddLsMPbV5CutE, udp: true}
+  - {name: ">🇵🇱 PL|高速|TG@FProxies|081311| 3", server: 217.30.10.65, port: 9061, type: ss, cipher: aes-256-cfb, password: 4R3hUfZ2FHhDmNcP, udp: true}
+  - {name: ">🇷🇺 RU|中速|TG@FProxies|081311|", server: 213.183.53.200, port: 9073, type: ssr, cipher: aes-256-cfb, password: daFYagqDdBdA6VTX, protocol: origin, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: ">🇷🇺 RU|中速|TG@FProxies|081311| 2", server: 213.183.53.222, port: 9060, type: ss, cipher: aes-256-cfb, password: ueLXVkvh4hckhErQ, udp: true}
+  - {name: ">🇷🇺 RU|中速|TG@FProxies|081311| 3", server: v2-tcp.shop, port: 15015, type: vmess, uuid: eb5df9f6-ff44-400c-8457-c1d4179b00d6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: v2-tcp.shop}}, udp: true}
+  - {name: ">🇷🇺 RU|中速|TG@FProxies|081311| 4", server: 213.183.53.200, port: 9046, type: ssr, cipher: aes-256-cfb, password: NvS8N4Vf8qAGPSCL, protocol: origin, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: ">🇷🇺 RU|高速|TG@FProxies|081311|", server: 213.183.53.177, port: 9033, type: ssr, cipher: aes-256-cfb, password: UTJA57ypk2XKQpnm, protocol: origin, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: ">🇷🇺 RU|高速|TG@FProxies|081311| 2", server: 213.183.53.214, port: 9031, type: ss, cipher: aes-256-cfb, password: BwcAUZk8hUFAkDGN, udp: true}
+  - {name: ">🇷🇺 RU|高速|TG@FProxies|081311| 3", server: 213.183.53.222, port: 9007, type: ss, cipher: aes-256-cfb, password: kSPmvwdFzGMMW5pY, udp: true}
+  - {name: ">🇷🇺 RU|高速|TG@FProxies|081311| 4", server: 213.183.53.212, port: 9018, type: ss, cipher: aes-256-cfb, password: fG2artUmHfNT2cX7, udp: true}
+  - {name: ">🇷🇺 RU|高速|TG@FProxies|081311| 5", server: 213.183.53.212, port: 9056, type: ss, cipher: aes-256-cfb, password: rNBfNuuANFCAk7KB, udp: true}
+  - {name: ">🇸🇬 SG|中速|TG@FProxies|081311|", server: totyun.v206-p.top, port: 443, type: trojan, password: 801717fc-080e-4eeb-9c63-7db15f586f15, skip-cert-verify: true, udp: true}
+  - {name: ">🇸🇬 SG|中速|TG@FProxies|081311| 2", server: totyun.v206-p.top, port: 37816, type: vmess, uuid: 1a9dbe5e-599d-45f7-b478-53b5f5a1fe51, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: totyun.v206-p.top}}, udp: true}
+  - {name: ">🇸🇬 SG|高速|TG@FProxies|081311|", server: 104.19.20.0, port: 80, type: vmess, uuid: 20000000-0000-0000-0000-000000000020, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /Danhuang/Jiang}, udp: true}
+  - {name: ">🇸🇬 SG|高速|TG@FProxies|081311| 2", server: v2-tcp.shop, port: 15027, type: vmess, uuid: 487e460f-1204-4e0a-a3fb-0e30d746210a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: v2-tcp.shop}}, udp: true}
+  - {name: ">🇸🇬 SG|高速|TG@FProxies|081311| 3", server: v2-tcp.shop, port: 15027, type: vmess, uuid: 4b769ccf-5d76-427f-ad27-de046b43d087, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: v2-tcp.shop}}, udp: true}
+  - {name: ">🇸🇬 SG|高速|TG@FProxies|081311| 4", server: v2-tcp.shop, port: 15027, type: vmess, uuid: 4b2c6a39-2f28-4de6-a768-90c06c864e73, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: v2-tcp.shop}}, udp: true}
+  - {name: ">🇹🇼 TW|中速|TG@FProxies|081311|", server: 716tw.fx6688.top, port: 443, type: vmess, uuid: 2cc10f9c-fb02-3e45-b619-c3b98cde912a, alterId: 2, cipher: auto, tls: true, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: 716tw.fx6688.top}}, udp: true}
+  - {name: ">🇺🇸 US|中速|TG@FProxies|081311|", server: 167.88.63.79, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇺🇸 US|中速|TG@FProxies|081311| 2", server: 167.88.63.79, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: ">🇺🇸 US|中速|TG@FProxies|081311| 3", server: 167.88.62.68, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311|", server: 38.68.135.18, port: 5601, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 2", server: 38.86.135.27, port: 9102, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 3", server: 38.114.114.67, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 4", server: 38.114.114.19, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 5", server: 38.68.135.19, port: 5601, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 6", server: 20.247.123.5, port: 20713, type: trojan, password: e84a6030-8b82-388a-b5da-c3189eeb02d3, skip-cert-verify: true, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 7", server: 38.68.134.85, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 8", server: hawaii.missionsec.us, port: 443, type: trojan, password: ZVqSTHcLasKIKGnzjnr8aHRPATiaTj5U, sni: DanHuang.Jiang, skip-cert-verify: true, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 9", server: jixu4.qiqis.ml, port: 443, type: vmess, uuid: 8ff3321a-63c5-48a5-a469-f334789102ff, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: DanHuang.Jiang, network: ws, ws-opts: {path: /Danhuang/Jiang, headers: {Host: jixu4.qiqis.ml}}, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 10", server: 38.75.136.102, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 11", server: 38.143.66.64, port: 5001, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 12", server: lv.hootfun.top, port: 21311, type: trojan, password: 935f34c1-1713-402c-bfe1-f051cf49d370, skip-cert-verify: true, udp: true}
+  - {name: ">🇺🇸 US|高速|TG@FProxies|081311| 13", server: 38.114.114.67, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true}
+  - {name: ">🇻🇳 VN|高速|TG@FProxies|081311|", server: 103.169.35.172, port: 80, type: vmess, uuid: 6cbf4eda-e166-4db3-a53c-33f4c75a221c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vpngiare.net}, udp: true}
