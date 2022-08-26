@@ -12,14 +12,14 @@ proxy-groups:
     proxies:
       - 自动
       - 中国
-      - 中转池
+      - 转池
       - 原生
-      - 其他
+      - 低速
   - name: 自动
     type: url-test
     use:
       - 中国
-      - 中转池
+      - 转池
       - 原生
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -28,18 +28,18 @@ proxy-groups:
     type: select
     use:
       - 中国
-  - name: 中转池
+  - name: 转池
     type: select
     use:
-      - 中转池
+      - 转池
   - name: 原生
     type: select
     use:
       - 原生
-  - name: 其他
+  - name: 低速
     type: select
     use:
-      - 其他
+      - 低速
 proxy-providers:
   中国:
     type: http
@@ -50,11 +50,11 @@ proxy-providers:
       enable: true
       interval: 300
       url: http://www.gstatic.com/generate_204
-  中转池:
+  转池:
     type: http
     url: "http://192.168.99.10:12580/clash/proxies?nc=CN,HK,TW&filter=rp&speed=10"
     interval: 3600
-    path: provider/中转池.yaml
+    path: provider/转池.yaml
     health-check:
       enable: true
       interval: 300
@@ -68,11 +68,11 @@ proxy-providers:
       enable: true
       interval: 300
       url: http://www.gstatic.com/generate_204
-  其他:
+  低速:
     type: http
     url: "http://192.168.99.10:12580/clash/proxies?speed=0,10"
     interval: 3600
-    path: provider/其他.yaml
+    path: provider/低速.yaml
     health-check:
       enable: true
       interval: 300
