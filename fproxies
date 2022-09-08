@@ -1,3 +1,4 @@
+  proxies:
   - {name: ">Beta|🇺🇳 FP|高速|TG@FProxies|0905|", server: us.xund8.xyz, port: 41006, type: ssr, cipher: aes-256-cfb, password: aLPVFv, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 5:N7LSgK, obfs-param: 5d8a45.microsoft.com, udp: true}
   - {name: ">Relay|🇯🇵 JP|中速|TG@FProxies|0905|", server: dajbxjp.naikonode.top, port: 15204, type: ssr, cipher: chacha20-ietf, password: NaikoCloud, protocol: auth_aes128_md5, obfs: http_simple, protocol-param: 1596:vsqvobohcqs, obfs-param: DanHuang.Jiang, udp: true}
   - {name: ">Relay|🇯🇵 JP|中速|TG@FProxies|0905| 2", server: dajbxjp.naikonode.top, port: 15203, type: ssr, cipher: chacha20-ietf, password: NaikoCloud, protocol: auth_aes128_md5, obfs: http_simple, protocol-param: 1596:vsqvobohcqs, obfs-param: DanHuang.Jiang, udp: true}
